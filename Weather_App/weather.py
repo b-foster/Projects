@@ -124,7 +124,7 @@ def more_info(response):
         
 # Fucntion for randomly picking a random location from the cityinfo.json file
 def random_info():
-    new = data[random.randint(1,210000)]
+    new = data[random.randint(1,140000)]
 
     # Opens the country_codes.txt file to accurately display the correct country info
     with open("country_codes.txt", "r") as csv_file:
