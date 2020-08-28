@@ -21,7 +21,7 @@ import random
 import csv
 import time
 
-# api-key: 77d31578acad00e89124a9883284b028
+API_KEY=""
 
 country_dict = {}
 country_list = []
@@ -134,7 +134,7 @@ def random_info():
                 s_country = row[0]
     
     # Grabbing the correct API data from open weather
-    random_api = "http://api.openweathermap.org/data/2.5/weather?q={},{}&units=imperial&APPID=77d31578acad00e89124a9883284b028".format("+".join(new['name'].split()), new['country'])
+    random_api = "http://api.openweathermap.org/data/2.5/weather?q={},{}&units=imperial&APPID={}".format("+".join(new['name'].split()), new['country'], API_KEY)
     
     random_test = requests.get(random_api)
     
@@ -167,7 +167,7 @@ def world_info():
                     country = row[1]
     
     # API location based on user input
-    world_api = "http://api.openweathermap.org/data/2.5/weather?q={},{},us&units=imperial&APPID=77d31578acad00e89124a9883284b028".format("+".join(city.split()), "+".join(country.split()))
+    world_api = "http://api.openweathermap.org/data/2.5/weather?q={},{},us&units=imperial&APPID={}".format("+".join(city.split()), "+".join(country.split()), API_KEY)
     
     world_test = requests.get(world_api)
     
@@ -212,7 +212,7 @@ def us_info():
                         state = key
                
             # city/state API data retrieval
-            cs_api = "http://api.openweathermap.org/data/2.5/weather?q={},{},us&units=imperial&APPID=77d31578acad00e89124a9883284b028".format("+".join(city.split()), "+".join(state.split()))
+            cs_api = "http://api.openweathermap.org/data/2.5/weather?q={},{},us&units=imperial&APPID={}".format("+".join(city.split()), "+".join(state.split()), API_KEY)
             
             cs_test = requests.get(cs_api)
             
@@ -245,7 +245,7 @@ def us_info():
                     print("Not a valid zip code.")
                
             # Zip code data API based on user entered zip code
-            zip_api = "http://api.openweathermap.org/data/2.5/weather?q={},us&units=imperial&APPID=77d31578acad00e89124a9883284b028".format(zippy)
+            zip_api = "http://api.openweathermap.org/data/2.5/weather?q={},us&units=imperial&APPID={}".format(zippy, API_KEY)
             
             zip_test = requests.get(zip_api)
             
