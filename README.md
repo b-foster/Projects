@@ -1,7 +1,7 @@
-# School_Projects
-Projects throughout my Data Science Masters Program.
+# Projects
+Projects I started during my Data Science Masters Program and continue to work on these.
 
-Hello and Welcome! This repository contains some projects throughout my Masters Program. 
+Hello and Welcome! This repository contains a few projects I started and enjoyed the coursework and wanted to maintain the work and improve upon the results.
 
 
 If you are looking through the different projects, all should run fine with the exception of the Weather_App and Stock Price Analysis programs - this is due to API safety issues.
